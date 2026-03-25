@@ -32,7 +32,7 @@ class RowingSession:
         # convert my_time from seconds to minutes
         time_in_minutes = self.my_time / 60
 
-        adjusted_MET = self.calculate_base_MET()
+        adjusted_MET = self.calculate_base_MET(performance['watts'])
         print(adjusted_MET)
 
         # calculate the calories burned
@@ -40,12 +40,12 @@ class RowingSession:
         kcal = kcal_per_minute * time_in_minutes
         return kcal
     
-    def calculate_base_MET(self):
+    def calculate_base_MET(self, watts):
         # convert pounds to kilograms
         weight_in_kg = self.weight / 2.20462
 
         # caculate vo2 -> standard rowing formula
-        vo2 = (2.8 * performance['watts']) / weight_in_kg + 3.5
+        vo2 = (2.8 * watts) / weight_in_kg + 3.5
 
         # calculate base MET
         base_MET = vo2 / 3.5
