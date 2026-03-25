@@ -60,6 +60,7 @@ class RowingSession:
         else:
             print('Eat less carbs to get to Keto Burn!')
     
+    @staticmethod
     def get_rowing_input(prompt):
         while True:
             user_input = input(prompt)
