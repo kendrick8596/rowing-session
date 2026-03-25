@@ -12,8 +12,8 @@ class RowingSession:
         #self.MET = MET
         self.carbs = carbs
 
-        if workout_date == None:
-            workout_date.Now().strftime("%Y-%m-%d")
+        if workout_date is None:
+            self.workout_date = date.today()
         else:
             self.workout_date = workout_date
 
