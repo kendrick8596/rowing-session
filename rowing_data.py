@@ -104,7 +104,7 @@ my_time = RowingSession.get_rowing_input('Enter time in seconds: ')
 weight = RowingSession.get_rowing_input('Enter your weight in pounds: ')
 #MET = RowingSession.get_rowing_input('Enter your MET: ')
 carbs = RowingSession.get_rowing_input('Enter daily carbs: ')
-workout_date = RowingSession.get_rowing_input('Enter Date: ')
+workout_date = input('Enter Date: ')
 
 # Create instance of the class
 session_split = RowingSession(meters, my_time, weight, carbs, workout_date)
